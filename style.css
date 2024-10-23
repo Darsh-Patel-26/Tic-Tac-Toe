@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Dark background for contrast */
+    font-family: 'Orbitron', sans-serif; /* Optional cyberpunk-style font */
+    flex-direction: column;
+}
+
+.board {
+    height: 70vmin; /* Responsive height */
+    width: 70vmin; /* Responsive width */
+    background-color: rgb(25, 25, 25); /* Dark background for the board */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust for responsive layout */
+    padding: 1rem;
+    border-radius: 10%;
+    gap: 0.7rem;
+    border: 2px solid #ff00ff; /* Neon purple border */
+    box-shadow: 0 0 30px #00ffcc, 0 0 60px #ff00ff; /* Cyberpunk glow */
+}
+
+.slot {
+    aspect-ratio: 1; /* Maintain square shape */
+    background-color: rgb(25, 25, 25); /* Keep the slots dark */
+    color: #00ffcc; /* Neon cyan for text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw; /* Responsive font size */
+    border-radius: 30%;
+    border: 2px solid #ff00ff; /* Neon purple border for slots */
+    box-shadow: 0 0 10px #ff00ff, inset 0 0 15px #00ffcc; /* Outer and inner glow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Add hover effect for an interactive feel */
+.slot:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten the slot on hover */
+    box-shadow: 0 0 20px #00ffcc, inset 0 0 25px #ff00ff; /* Intensified glow on hover */
+}
+
+.author {
+    color: #00ffcc; /* Neon cyan for text */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.author a {
+    color: #ff00ff; /* Neon purple for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.author a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+}
+
+.modal-content {
+    background-color: rgb(40, 40, 40);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid rgb(255, 179, 0);
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    text-align: center;
+    color: #00ffcc; /* Neon cyan */
+}
+
+.close {
+    color: #ff00ff; /* Neon purple */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#restartButton {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(255, 179, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black;
+}
+
+#restartButton:hover {
+    background-color: #00ffcc;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    .board {
+        height: 80vmin; /* Increase size for smaller screens */
+        width: 80vmin; /* Increase size for smaller screens */
+    }
+
+    .slot {
+        font-size: 12vw; /* Larger font size for small screens */
+    }
+
+    .author {
+        font-size: 1rem; /* Adjust author text size */
+    }
+}
