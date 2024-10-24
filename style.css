@@ -34,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10vw; /* Responsive font size */
+    font-size: 7vw; /* Responsive font size */
     border-radius: 30%;
     border: 2px solid #ff00ff; /* Neon purple border for slots */
     box-shadow: 0 0 10px #ff00ff, inset 0 0 15px #00ffcc; /* Outer and inner glow */
@@ -124,7 +124,7 @@ body {
     }
 
     .slot {
-        font-size: 12vw; /* Larger font size for small screens */
+        font-size: 10vw; /* Larger font size for small screens */
     }
 
     .author {
