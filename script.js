@@ -40,14 +40,14 @@ function hasWon() {
     
     // Check horizontal wins
     for (let i = 0; i < 3; i++) {
-        if (hFlag) return true;
         hFlag = (board[i][0] != null) && (board[i][0] === board[i][1] && board[i][0] === board[i][2]);
+        if (hFlag) return true;
     }
 
     // Check vertical wins
     for (let i = 0; i < 3; i++) {
-        if (vFlag) return true;
         vFlag = (board[0][i] != null) && (board[0][i] === board[1][i] && board[0][i] === board[2][i]);
+        if (vFlag) return true;
     }
 
     // Check diagonal wins
