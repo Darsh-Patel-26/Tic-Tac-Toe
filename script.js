@@ -5,7 +5,7 @@ let board = [
     [null, null, null]
 ];
 
-var player = 1; // Player 1 is 'X' and Player 2 is 'O'
+var player = 2; // Player 1 is 'X' and Player 2 is 'O'
 
 // Modal elements
 const modal = document.getElementById('modal');
