@@ -74,7 +74,16 @@ closeModal.onclick = function() {
 
 // Close the modal when the user clicks on the restart button
 restartButton.onclick = function() {
-    location.reload();
+    // location.reload();
+    modal.style.display = "none";
+    board = [
+        [null, null, null],
+        [null, null, null],
+        [null, null, null]
+    ];
+    slots.forEach(slot => {
+        slot.textContent = '';
+    });
 };
 
 // Close the modal when the user clicks anywhere outside of the modal
